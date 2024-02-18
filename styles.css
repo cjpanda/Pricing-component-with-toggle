@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Gradient*/
+  --gradient-start: #a3a8f0;
+  --gradient-end: #696fdd;
+
+  /* Colors */
+  --very-light-grayish-blue: #f6f6fe;
+  --light-grayish-blue: #b3b5c6;
+  --grayish-blue: #6d708d;
+  --dark-grayish-blue: #494c5f;
+
+  --font-family: "Montserrat";
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--very-light-grayish-blue);
+  background-image: url("bg-top.svg"), url("bg-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+  background-attachment: fixed;
+  background-size: contain, auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.price-container {
+  text-align: center;
+  padding: 30px;
+  color: var(--dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1005;
+}
+.component-name {
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-text {
+  font-weight: 700;
+  color: var(--light-grayish-blue);
+}
+
+#toggleBg {
+  width: 60px;
+  height: 25px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#toggleButton {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 5px;
+  margin-right: 5px;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.price-cards {
+  display: flex;
+  margin-top: 50px;
+}
+
+.price-name {
+  padding-top: 20px;
+}
+
+.card-price {
+  font-size: 50px;
+  width: 100%;
+}
+
+.card1 {
+  background-color: white;
+  padding: 0 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.card2 {
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  padding: 0 50px;
+  color: white;
+  margin: -20px;
+  position: relative;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+}
+.card3 {
+  background-color: white;
+  padding: 0 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.line {
+  border-bottom: 1px solid rgb(231, 231, 231);
+  width: 250px;
+  align-items: center;
+}
+span {
+  font-size: 30px;
+}
+.card-features {
+  font-size: 12px;
+}
+
+.button-white {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: var(--very-light-grayish-blue);
+  font-family: var(--font-family);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+}
+
+.button-white:hover {
+  border-color: #696fdd;
+  background: transparent;
+  color: #696fdd;
+}
+
+.button-purple {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: var(--gradient-end);
+  font-family: var(--font-family);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.button-purple:hover {
+  border-color: var(--very-light-grayish-blue);
+  background: transparent;
+  color: var(--very-light-grayish-blue);
+}
+
+@media (max-width: 768px) {
+  .price-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  body {
+    background-attachment: fixed;
+    background-size: 250px, 250px;
+  }
+
+  .card2 {
+    margin: 0;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 80%;
+  }
+  .line {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-price {
+    width: 100%;
+    text-align: center;
+  }
+}
